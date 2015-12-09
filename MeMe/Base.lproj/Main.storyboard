@@ -18,20 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TTg-oU-Xbc">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TTg-oU-Xbc">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bBd-cm-nwi">
-                                <rect key="frame" x="20" y="70" width="560" height="50"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MTx-Z9-g2B">
-                                <rect key="frame" x="20" y="456" width="560" height="50"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MTx-Z9-g2B">
+                                <rect key="frame" x="20" y="437" width="560" height="31"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -54,24 +47,33 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bBd-cm-nwi">
+                                <rect key="frame" x="20" y="97" width="560" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bBd-cm-nwi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="4En-Dy-4zA"/>
-                            <constraint firstItem="yya-O2-YZr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="509-Nf-Mrt"/>
-                            <constraint firstItem="bBd-cm-nwi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5bd-BS-aLe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yya-O2-YZr" secondAttribute="trailing" constant="-20" id="HFU-ho-dic"/>
-                            <constraint firstItem="bBd-cm-nwi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="PmQ-xM-6oR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="TTg-oU-Xbc" secondAttribute="trailing" constant="-20" id="Qsh-Mr-0Ta"/>
-                            <constraint firstItem="TTg-oU-Xbc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="TI0-Kq-yz0"/>
-                            <constraint firstItem="MTx-Z9-g2B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YhJ-mi-eNG"/>
-                            <constraint firstItem="yya-O2-YZr" firstAttribute="top" secondItem="TTg-oU-Xbc" secondAttribute="bottom" id="bs1-Ch-4TE"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yya-O2-YZr" secondAttribute="bottom" id="eMT-hb-MkW"/>
-                            <constraint firstItem="MTx-Z9-g2B" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gwF-9W-llN"/>
-                            <constraint firstItem="TTg-oU-Xbc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="gwu-6U-NcR"/>
-                            <constraint firstItem="yya-O2-YZr" firstAttribute="top" secondItem="MTx-Z9-g2B" secondAttribute="bottom" constant="50" id="sBm-uS-Fl7"/>
-                            <constraint firstItem="yya-O2-YZr" firstAttribute="top" secondItem="TTg-oU-Xbc" secondAttribute="bottom" id="vou-9V-6NY"/>
+                            <constraint firstItem="bBd-cm-nwi" firstAttribute="leading" secondItem="TTg-oU-Xbc" secondAttribute="trailing" constant="-580" id="1uq-Xb-Ztz"/>
+                            <constraint firstItem="MTx-Z9-g2B" firstAttribute="top" secondItem="TTg-oU-Xbc" secondAttribute="bottom" constant="-119" id="2s2-Gs-f4V"/>
+                            <constraint firstItem="bBd-cm-nwi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4be-ge-UPf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TTg-oU-Xbc" secondAttribute="trailing" constant="-20" id="AWH-kR-fRF"/>
+                            <constraint firstItem="MTx-Z9-g2B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BR1-xl-R4N"/>
+                            <constraint firstItem="yya-O2-YZr" firstAttribute="top" secondItem="TTg-oU-Xbc" secondAttribute="bottom" id="BrQ-Su-nde"/>
+                            <constraint firstItem="MTx-Z9-g2B" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="F93-2c-E0s"/>
+                            <constraint firstItem="TTg-oU-Xbc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="L2T-90-Q6J"/>
+                            <constraint firstItem="bBd-cm-nwi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="R2A-Dv-7Iy"/>
+                            <constraint firstItem="yya-O2-YZr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="UuB-gn-M9D"/>
+                            <constraint firstItem="TTg-oU-Xbc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="fjV-5p-DZY"/>
+                            <constraint firstItem="TTg-oU-Xbc" firstAttribute="top" secondItem="bBd-cm-nwi" secondAttribute="bottom" constant="-63" id="g8f-fV-LLA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yya-O2-YZr" secondAttribute="trailing" constant="-20" id="gOP-UJ-fVI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yya-O2-YZr" secondAttribute="bottom" id="it9-iK-Kc5"/>
+                            <constraint firstItem="yya-O2-YZr" firstAttribute="top" secondItem="TTg-oU-Xbc" secondAttribute="bottom" id="iwa-sq-WOE"/>
+                            <constraint firstItem="MTx-Z9-g2B" firstAttribute="leading" secondItem="TTg-oU-Xbc" secondAttribute="trailing" constant="-580" id="qnq-Dj-Sfa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cPT-Qo-ALb">
@@ -88,6 +90,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bottomTextField" destination="MTx-Z9-g2B" id="0Yk-pe-zHk"/>
+                        <outlet property="cameraButton" destination="wKD-TS-0hf" id="rSF-Wh-h8q"/>
                         <outlet property="imageView" destination="TTg-oU-Xbc" id="Z6S-TX-n3c"/>
                         <outlet property="shareButton" destination="zaL-rh-ezX" id="hQ9-pX-Fet"/>
                         <outlet property="topTextField" destination="bBd-cm-nwi" id="QVS-r9-uyE"/>

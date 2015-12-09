@@ -15,7 +15,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var shareButton: UIBarButtonItem!
-    
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
     
     let memeTextAttributes = [
         NSStrokeColorAttributeName : UIColor.blackColor(),
@@ -36,7 +36,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         super.viewWillAppear(animated)
         UpdateUI()
         subscribeToKeyboardNotifications()
-        
+        cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         
     }
     
@@ -74,14 +74,14 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            self.imageView.image = image
+            imageView.image = image
         }
             
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
@@ -94,7 +94,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        self.view.endEditing(true)
+        view.endEditing(true)
         
         return false
     }
@@ -109,15 +109,15 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     
     func keyboardWillShow(notification: NSNotification) {
         if bottomTextField.isFirstResponder() {
-            self.view.frame.origin.y -= getKeyboardHeight(notification)
+            view.frame.origin.y -= getKeyboardHeight(notification)
         } else if topTextField.isFirstResponder() {
-            self.view.frame.origin.y = 0
+            view.frame.origin.y = 0
         }
     }
     
     func keyboardWillHide(notification: NSNotification) {
         if bottomTextField.isFirstResponder() {
-            self.view.frame.origin.y = 0
+            view.frame.origin.y = 0
         }
     }
     
@@ -146,7 +146,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         navigationController?.toolbarHidden = true
         
         UIGraphicsBeginImageContext(self.view.frame.size)
-        self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
+        view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
         let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
@@ -165,7 +165,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        self.presentViewController(pickerController, animated: true, completion: nil)
+        presentViewController(pickerController, animated: true, completion: nil)
     }
     
     @IBAction func pickImageFromCamera (sender: AnyObject) {
@@ -173,7 +173,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
             let pickerController = UIImagePickerController()
             pickerController.delegate = self
             pickerController.sourceType = UIImagePickerControllerSourceType.Camera
-            self.presentViewController(pickerController, animated: true, completion: nil)
+            presentViewController(pickerController, animated: true, completion: nil)
         } else {
             print("Camera not available")
         }
