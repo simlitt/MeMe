@@ -136,9 +136,14 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     
     func save() {
         let memedImage = generateMemedImage()
+        let object = UIApplication.sharedApplication().delegate
+        let appDelegate = object as! AppDelegate
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, image: imageView.image!, memedImage: memedImage)
+        appDelegate.memes.append(meme)
         
     }
+    
+    
     
     func generateMemedImage() -> UIImage
     {
