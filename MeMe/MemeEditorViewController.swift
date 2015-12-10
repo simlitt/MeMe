@@ -84,14 +84,6 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func textFieldDidBeginEditing(textField: UITextField) {
-//        if topTextField.text == "TOP" {
-//            topTextField.text = nil
-//        }
-//        if bottomTextField.text == "BOTTOM" {
-//            bottomTextField.text = nil
-//        }
-    }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         view.endEditing(true)
