@@ -23,7 +23,7 @@ class SentMemesTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         configureTableView()
-        self.tableView.reloadData()
+        tableView.reloadData()
         print("sent memes view controller will appear")
     }
     

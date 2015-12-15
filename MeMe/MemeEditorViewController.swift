@@ -17,6 +17,8 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     
+    @IBOutlet weak var editMemeToolbar: UIToolbar!
+    
     let memeTextAttributes = [
         NSStrokeColorAttributeName : UIColor.blackColor(),
         NSForegroundColorAttributeName : UIColor.whiteColor(),
@@ -140,7 +142,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     func generateMemedImage() -> UIImage
     {
         navigationController?.navigationBar.hidden = true
-        navigationController?.toolbarHidden = true
+        editMemeToolbar.hidden = true
         
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
@@ -148,7 +150,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         UIGraphicsEndImageContext()
         
         navigationController?.navigationBar.hidden = false
-        navigationController?.toolbarHidden = false
+        editMemeToolbar.hidden = false
         
         return memedImage
     }

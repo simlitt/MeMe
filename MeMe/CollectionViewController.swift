@@ -28,7 +28,7 @@ class CollectionViewController: UICollectionViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.collectionView!.reloadData()
+        collectionView!.reloadData()
         print("collection view controller will appear")
     }
     
@@ -67,11 +67,11 @@ class CollectionViewController: UICollectionViewController {
 
 
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let object: AnyObject = self.storyboard!.instantiateViewControllerWithIdentifier("DetailsViewController")
+        let object: AnyObject = storyboard!.instantiateViewControllerWithIdentifier("DetailsViewController")
         let detailsVC = object as! MemeDetailViewController
         detailsVC.passedMeme = memes[indexPath.item]
         
-        self.navigationController?.pushViewController(detailsVC, animated: true)
+        navigationController?.pushViewController(detailsVC, animated: true)
     }
 
 }
