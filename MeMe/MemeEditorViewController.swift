@@ -49,6 +49,9 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     
     func UpdateUI() {
         
+        topTextField.defaultTextAttributes = memeTextAttributes
+        bottomTextField.defaultTextAttributes = memeTextAttributes
+        
         topTextField.text = "TOP"
         bottomTextField.text = "BOTTOM"
         
@@ -57,9 +60,6 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         
         topTextField.delegate = self
         bottomTextField.delegate = self
-        
-        topTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.defaultTextAttributes = memeTextAttributes
         
         if imageView.image == nil {
             shareButton.enabled = false
